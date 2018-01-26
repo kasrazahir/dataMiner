@@ -63,7 +63,7 @@ app.get('/run', (req, res) => {
 			.then(x=> payloads.KrakenTicker(x, time))
 			.then(x=> {addDbKraken('Trades', pair, x, time)})
 			
-		fetch('https://api.kraken.com/0/public/Depth?pair='+pair+'&count=5')
+		fetch('https://api.kraken.com/0/public/Depth?pair='+pair+'&count=200')
 			.then(x=> x.json())
 			.then(x=> payloads.KrakenBook(x, time))
 			.then(x=> {addDbKraken('Book', pair, x, time)})
