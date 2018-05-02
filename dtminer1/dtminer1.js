@@ -10,7 +10,7 @@ var payloads = require('./payloads');
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://kraken-d0db9.firebaseio.com"
+  databaseURL: "https://krakendaily-d3728.firebaseio.com"
 });
 const kraken  = krakenKey.key; // API Key
 var db = admin.firestore();
